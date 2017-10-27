@@ -6,5 +6,13 @@ namespace DockerCloud\API;
 
 abstract class AbstractRepoAPI extends AbstractAPI
 {
-    protected $api_prifix = '/api/repo/v1';
+    const API_PRIFIX_BASE = '/api/repo/v1';
+    protected $api_prifix = self::API_PRIFIX_BASE;
+
+    /**
+     * @param $namespace
+     */
+    function setOrganisationNamespace($namespace){
+        $this->api_prifix = self::API_PRIFIX_BASE."/".$namespace;
+    }
 }
