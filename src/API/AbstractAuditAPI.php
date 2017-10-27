@@ -9,7 +9,15 @@ use DockerCloud\Model\Response\AbstractGetResponse;
 
 abstract class AbstractAuditAPI extends AbstractAPI
 {
-    protected $api_prifix = '/api/audit/v1';
+    const API_PRIFIX_BASE = '/api/audit/v1';
+    protected $api_prifix = self::API_PRIFIX_BASE;
+
+    /**
+     * @param $namespace
+     */
+    function setOrganisationNamespace($namespace){
+        $this->api_prifix = self::API_PRIFIX_BASE."/".$namespace;
+    }
 
     /**
      * @param $uri
