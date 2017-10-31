@@ -6,7 +6,6 @@ namespace DockerCloud\API;
 
 use DockerCloud\Exception;
 use DockerCloud\Model\AbstractApplicationModel;
-use DockerCloud\Model\Response\AbstractGetResponse;
 
 /**
  * Class AbstractApplicationAPI
@@ -49,11 +48,4 @@ abstract class AbstractApplicationAPI extends AbstractAPI
      * @return AbstractApplicationModel
      */
     abstract function getByUri($uri);
-
-    /**
-     * @param $uri
-     *
-     * @return AbstractGetResponse
-     */
-    abstract function getListByUri($uri);
 }
