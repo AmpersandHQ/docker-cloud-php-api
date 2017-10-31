@@ -9,15 +9,7 @@ use DockerCloud\Model\Response\AbstractGetResponse;
 
 abstract class AbstractInfrastructrueAPI extends AbstractAPI
 {
-    const API_PRIFIX_BASE = '/api/infra/v1';
-    protected $api_prifix = self::API_PRIFIX_BASE;
-
-    /**
-     * @param $namespace
-     */
-    public function setOrganisationNamespace($namespace){
-        $this->api_prifix = self::API_PRIFIX_BASE."/".$namespace;
-    }
+    protected $api_prifix = '/api/infra/v1';
 
     /**
      * @param $uri
