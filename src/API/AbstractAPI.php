@@ -22,14 +22,14 @@ abstract class AbstractAPI
     protected $allowedGetListFilters = [];
 
     protected $organisation_namepsace = '';
-    
+
     /**
      * @param $namespace
      */
     public function setOrganisationNamespace($namespace){
         $this->organisation_namepsace = '/'.$namespace;
     }
-    
+
     /**
      * AbstractAPI constructor.
      */
