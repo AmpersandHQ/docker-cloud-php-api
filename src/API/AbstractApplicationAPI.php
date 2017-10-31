@@ -21,7 +21,7 @@ abstract class AbstractApplicationAPI extends AbstractAPI
     /**
      * @param $namespace
      */
-    function setOrganisationNamespace($namespace){
+    public function setOrganisationNamespace($namespace){
         $this->api_prifix = self::API_PRIFIX_BASE."/".$namespace;
     }
 
